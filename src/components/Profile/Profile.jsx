@@ -1,4 +1,5 @@
 import profileImg from '../../assets/img/profile/profile.jpg';
+import cv from '../../assets/img/cv.pdf';
 
 const profileContent = {
   profileImage: profileImg,
@@ -17,11 +18,24 @@ const Profile = () => {
     <>
       <div className=' home-profile-container'>
         <div className='description'>
-          <h1 className='text-uppercase poppins-font'>
-            <p> I'm {profileContent.profileTitleName}</p>
-            <span>{profileContent.profileDesignation}</span>
+          <h1 className='introduction text-uppercase poppins-font'>
+            <p>
+              <span class='introName'>
+                I'm {profileContent.profileTitleName}
+              </span>
+              <br />
+              <span class='introOccupation'>
+                {profileContent.profileDesignation}
+              </span>
+            </p>
           </h1>
           <p>{profileContent.profileDescriptions}</p>
+          <div className='col-12 mt-1'>
+            <a className='button' href={cv} download>
+              <span className='button-text'>Download CV</span>
+              <span className='button-icon fa fa-download'></span>
+            </a>
+          </div>
         </div>
 
         <div className='image'>

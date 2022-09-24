@@ -2,6 +2,8 @@ import './App.css';
 import AnimatedCursor from 'react-animated-cursor';
 // import { ToastContainer } from 'react-toastify';
 import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 import { useEffect } from 'react';
 import AllRoutes from './router/AllRoutes';
 

@@ -1,3 +1,6 @@
+body {
+  background-color: rgb(245, 245, 245);
+}
 .profile {
   background: #aff;
   p {
@@ -9,13 +12,112 @@
 }
 
 .home-profile-container {
-  display: flex;
-
   .description {
+    /* アニメーションの動き */
+    .introName,
+    .introOccupation {
+      display: inline-block;
+      overflow: hidden;
+      white-space: nowrap;
+      width: 0%;
+    }
+    .introName {
+      animation: introName 2s linear;
+      animation-fill-mode: forwards;
+    }
+    @keyframes introName {
+      from {
+        width: 0em;
+      }
+      50% {
+        width: 10em;
+      }
+      to {
+        width: 10em;
+      }
+    }
+    .introOccupation {
+      animation: introOccupation 2s linear;
+      animation-fill-mode: forwards;
+    }
+    @keyframes introOccupation {
+      from {
+        width: 0em;
+      }
+      50% {
+        width: 0em;
+      }
+      to {
+        width: 13em;
+      }
+    }
+
     margin: 100px;
     flex-basis: 40%;
   }
   .image {
     flex-basis: 60%;
   }
+}
+
+.home-profile-container,
+.home-index-container {
+  display: flex;
+  margin: 100px;
+  border: 1px solid #fff;
+  box-shadow: 2px 2px 4px rgb(156, 156, 156);
+  background-color: white;
+}
+
+.header {
+  position: fixed;
+  display: flex;
+  left: 12%;
+  align-items: center;
+  top: 20%;
+  opacity: 1;
+  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.header li.icon-box {
+  width: 50px;
+  height: 50px;
+  list-style: none;
+  position: relative;
+  display: flex;
+  display: inline-block;
+  align-items: center;
+  transition: 0.3s;
+  margin: 20px 0;
+}
+
+.header li.icon-box i {
+  color: rgb(80, 80, 80);
+  font-size: 19px;
+  transition: 0.3s;
+}
+
+.header li.icon-box:hover i {
+  // iはicon自体を指す(i-tag)
+  color: rgb(240, 255, 173);
+}
+.header li.icon-box:hover {
+  border-radius: 30%;
+  background: #444444;
+}
+
+.header .icon-box i.fa {
+  position: absolute;
+}
+
+.header i {
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  top: 15px;
 }
