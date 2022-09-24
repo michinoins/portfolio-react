@@ -1,0 +1,21 @@
+.profile {
+  background: #aff;
+  p {
+    background: #faf;
+  }
+  img {
+    background-size: 10px;
+  }
+}
+
+.home-profile-container {
+  display: flex;
+
+  .description {
+    margin: 100px;
+    flex-basis: 40%;
+  }
+  .image {
+    flex-basis: 60%;
+  }
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-// import Hero from '../../components/hero/Hero';
+import Profile from '../components/Profile/Profile';
 // import Index from '../../components/about/index';
 // import Address from '../../components/Address';
 
@@ -36,7 +36,8 @@ const Home = () => {
           <TabPanel className='home '>
             <div data-aos='fade-up' data-aos-duration='1200'>
               {/* <Hero /> */}
-              Tab1
+              <div className='color-block d-none d-lg-block'></div>
+              <Profile />
             </div>
           </TabPanel>
 
